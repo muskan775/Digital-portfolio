@@ -3,135 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Muskan Yadav | Cybersecurity Portfolio</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Courier New, monospace;
-background:black;
-color:#00ff9c;
+padding:0;
+box-sizing:border-box;
 }
 
-/* Header */
+body{
+font-family: "Courier New", monospace;
+background:black;
+color:#00ff9c;
+overflow-x:hidden;
+}
+
+/* MATRIX BACKGROUND */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* HEADER */
 
 header{
 text-align:center;
-padding:60px 20px;
-border-bottom:1px solid #00ff9c;
+padding:80px 20px;
 }
 
 header h1{
-font-size:40px;
-letter-spacing:2px;
+font-size:45px;
+letter-spacing:3px;
+text-shadow:0 0 15px #00ff9c;
 }
-
-.profile{
-width:150px;
-border-radius:50%;
-border:3px solid #00ff9c;
-margin-top:20px;
-box-shadow:0 0 20px #00ff9c;
-}
-
-/* Buttons */
-
-.buttons{
-margin-top:25px;
-}
-
-.buttons a{
-text-decoration:none;
-color:#00ff9c;
-border:1px solid #00ff9c;
-padding:10px 20px;
-margin:10px;
-display:inline-block;
-transition:0.3s;
-}
-
-.buttons a:hover{
-background:#00ff9c;
-color:black;
-box-shadow:0 0 15px #00ff9c;
-}
-
-/* Sections */
-
-section{
-max-width:900px;
-margin:auto;
-padding:50px 20px;
-border-bottom:1px solid #002e21;
-}
-
-h2{
-color:#00ff9c;
-text-shadow:0 0 10px #00ff9c;
-margin-bottom:20px;
-}
-
-ul{
-line-height:1.8;
-}
-
-/* Project cards */
-
-.project{
-border:1px solid #00ff9c;
-padding:20px;
-margin:20px 0;
-transition:0.3s;
-}
-
-.project:hover{
-box-shadow:0 0 20px #00ff9c;
-}
-
-/* Footer */
-
-footer{
-text-align:center;
-padding:30px;
-color:#00ff9c;
-}
-
-/* Terminal effect */
 
 .typing{
+margin-top:15px;
+font-size:18px;
 border-right:2px solid #00ff9c;
 white-space:nowrap;
 overflow:hidden;
-animation:typing 4s steps(40,end), blink .7s infinite;
+width:0;
+animation:typing 4s steps(40,end) forwards, blink .8s infinite;
 }
 
 @keyframes typing{
 from{width:0}
-to{width:100%}
+to{width:320px}
 }
 
 @keyframes blink{
 50%{border-color:transparent}
 }
 
+/* PROFILE */
+
+.profile{
+width:170px;
+height:170px;
+border-radius:50%;
+border:4px solid #00ff9c;
+margin-top:30px;
+box-shadow:0 0 30px #00ff9c;
+object-fit:cover;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:35px;
+}
+
+.buttons a{
+display:inline-block;
+margin:10px;
+padding:12px 30px;
+color:#00ff9c;
+text-decoration:none;
+border:2px solid #00ff9c;
+transition:.3s;
+}
+
+.buttons a:hover{
+background:#00ff9c;
+color:black;
+box-shadow:0 0 20px #00ff9c;
+}
+
+/* SECTIONS */
+
+section{
+max-width:900px;
+margin:auto;
+padding:70px 20px;
+border-bottom:1px solid #002e21;
+}
+
+h2{
+margin-bottom:20px;
+font-size:30px;
+text-shadow:0 0 10px #00ff9c;
+}
+
+/* SKILLS */
+
+ul{
+line-height:1.8;
+}
+
+/* PROJECT CARDS */
+
+.project{
+border:1px solid #00ff9c;
+padding:20px;
+margin-top:20px;
+transition:.3s;
+}
+
+.project:hover{
+box-shadow:0 0 25px #00ff9c;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+}
+
 </style>
+
 </head>
 
 <body>
+
+<canvas id="matrix"></canvas>
 
 <header>
 
 <h1>Muskan Yadav</h1>
 
-<p class="typing">Cybersecurity Student | SOC Analyst Enthusiast</p>
+<p class="typing">Cybersecurity Student | SOC Analyst</p>
 
-<img src="https://via.placeholder.com/150" class="profile">
+<img src="yourphoto.jpg" class="profile">
 
 <div class="buttons">
+
 <a href="https://www.linkedin.com/in/muskan-yadav" target="_blank">LinkedIn</a>
+
 <a href="https://github.com/muskan775" target="_blank">GitHub</a>
-<a href="#">Resume</a>
+
+<a href="resume.pdf" target="_blank">Resume</a>
+
 </div>
 
 </header>
@@ -144,9 +173,9 @@ to{width:100%}
 <p>
 Cybersecurity undergraduate specializing in Security Operations (SOC),
 threat monitoring, and network analysis. Experienced with Linux,
-Kali Linux, Wireshark, and SIEM tools like Splunk. Passionate about
-incident detection, log analysis, and defending systems against
-cyber threats.
+Kali Linux, Wireshark and SIEM tools like Splunk. Passionate about
+detecting threats, analyzing logs and protecting systems from
+cyber attacks.
 </p>
 
 </section>
@@ -158,10 +187,10 @@ cyber threats.
 
 <ul>
 <li>Networking: TCP/IP, DNS, HTTP/HTTPS</li>
-<li>Cybersecurity: Network Security Basics, SIEM Fundamentals</li>
+<li>Cybersecurity: SIEM Fundamentals, Threat Monitoring</li>
 <li>Tools: Wireshark, Kali Linux, Splunk</li>
 <li>Operating Systems: Linux (Kali/Ubuntu), Windows</li>
-<li>Programming: Python (Security scripting basics)</li>
+<li>Programming: Python (Basic Security Scripting)</li>
 <li>Virtualization: VirtualBox / VMware</li>
 </ul>
 
@@ -177,9 +206,9 @@ cyber threats.
 <h3>Mini SOC Lab using Splunk & Kali Linux</h3>
 
 <p>
-Built a home SOC lab using Kali Linux, Windows VM, and Splunk SIEM.
-Generated security logs, detected failed login attempts,
-and created dashboards to monitor suspicious activity.
+Built a home SOC lab using Kali Linux, Windows VM and Splunk SIEM.
+Generated and monitored security logs, detected failed login
+attempts and created dashboards for security monitoring.
 </p>
 
 </div>
@@ -189,9 +218,9 @@ and created dashboards to monitor suspicious activity.
 <h3>SOC Analyst Home Lab</h3>
 
 <p>
-Set up a cybersecurity environment using virtual machines to
-practice network monitoring and traffic analysis and
-understand potential threats and attack behavior.
+Created a cybersecurity lab using virtual machines to practice
+network monitoring, traffic analysis and understand potential
+security threats.
 </p>
 
 </div>
@@ -204,8 +233,8 @@ understand potential threats and attack behavior.
 <h2>Leadership</h2>
 
 <p>
-NSS Coordinator – Organized volunteer activities, awareness
-campaigns, and community initiatives at the university.
+NSS Coordinator – Organized volunteer activities,
+awareness campaigns and university social initiatives.
 </p>
 
 </section>
@@ -230,6 +259,53 @@ campaigns, and community initiatives at the university.
 
 </footer>
 
+
+<script>
+
+/* MATRIX EFFECT */
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "01";
+const fontSize = 14;
+
+const columns = canvas.width / fontSize;
+
+const drops = [];
+
+for(let x = 0; x < columns; x++)
+drops[x] = 1;
+
+function draw(){
+
+ctx.fillStyle = "rgba(0,0,0,0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle = "#00ff9c";
+ctx.font = fontSize + "px monospace";
+
+for(let i=0;i<drops.length;i++){
+
+const text = letters[Math.floor(Math.random()*letters.length)];
+
+ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+
+if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+drops[i] = 0;
+
+drops[i]++;
+
+}
+
+}
+
+setInterval(draw,35);
+
+</script>
 
 </body>
 </html>
